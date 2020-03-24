@@ -1,0 +1,22 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(16, auto);
+  justify-content: center;
+}
+/* #p-1 {
+  grid-area
+} */
+
+.cell {
+  width: 25px;
+  height: 25px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+  border-radius: 5px;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+  background-color: rgb(132,98,253);
+}
