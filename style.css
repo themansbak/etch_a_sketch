@@ -1,21 +1,54 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "container";
+  justify-content: center;
+  grid-row-gap: 1vw;
+}
+button, input {
+  font-family: "Helvetica, sans-serif";
+  font-size: 16px;
+}
+button {
+  border: none;
+  border-radius: 4px;
+  padding: 0 16px;
+  min-width: 64px;
+  text-transform: uppercase;
+  color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+  background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+}
+input {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  width: 5vw;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+.header {
+  grid-area: header;
+  margin: auto;
+}
 .container {
   display: grid;
-  grid-template-columns: repeat(16, auto);
-  justify-content: center;
+  margin: auto 0;
+  width: 85vw;
+  height: 85vw;
+  max-width: 85vh;
+  max-height: 85vh;
+  grid-area: container;
 }
-/* #p-1 {
-  grid-area
-} */
-
 .cell {
-  width: 25px;
-  height: 25px;
   border-style: solid;
   border-width: 1px;
-  border-color: gray;
-  border-radius: 5px;
+  border-color: lightgray;
 }
-
 .cell:hover {
   transform: scale(1.1);
   background-color: rgb(132,98,253);

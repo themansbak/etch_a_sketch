@@ -1,12 +1,9 @@
-/*
-Use grid-template
-- default is 16x16
-- create div, add div, for n-times (min: 16)
-- on hover, cell should change to a different color (use rgb)
-*/
 const container = document.querySelector('.container');
-console.log('here');
-createCells(addClass);
+createCells();
+
+function submitInput() {
+  createCells(100);
+}
 
 function addClass() {
   const cells = document.querySelectorAll('.cell');
@@ -17,13 +14,14 @@ function addClass() {
   });
 }
 
-function createCells(callback, numCells=16) {
-  for (var i=0; i<numCells; i++) {
-    for (var j=0; j<numCells; j++) {
-      const div = document.createElement('div');
-      div.classList.add('cell');
-      container.append(div);
-    }
+function createCells(numCells=16) {
+  container.innerHTML = '';
+  container.style.gridTemplateColumns = 'repeat('+numCells+',1fr)';
+  container.style.gridTemplateRows = 'repeat('+numCells+',1fr)';
+  for (var i=0; i<numCells**2; i++) {
+    const div = document.createElement('div');
+    div.classList.add('cell');
+    container.append(div);
   }
-  callback();
+  addClass();
 }
