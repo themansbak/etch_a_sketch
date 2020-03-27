@@ -1,3 +1,8 @@
+<!--
+row of divs with different colors
+-on select changes the color to change to
+ -->
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -7,7 +12,9 @@
   </head>
   <body>
     <div class="header">
-      <button class="resize-button" onclick="submitInput()">Resize</button>
+      <button id="prompt-button" onclick="popupInput()">Popup</button>
+      <button id="resize-button">Resize</button>
+      <input id="resize-input" type="number" placeholder="16" value="16">
     </div>
     <div class="container"></div>
   </body>
